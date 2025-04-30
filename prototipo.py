@@ -18,7 +18,7 @@ def estado_0(cola):
 
 def estado_1(cola, i):
     if(cola[i] == "a"):
-        cola[i] = "Ø"
+        cola[i] = "Ø"   
         estado_2(cola, "a", i)
 
     elif(cola[i] == "b"):
@@ -49,6 +49,7 @@ def estado_3(cola, j):
     estado_1(cola, i)
     
 estado_0(cola)
+print(cola)
     
 
 
