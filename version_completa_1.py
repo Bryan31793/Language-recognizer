@@ -67,7 +67,11 @@ def estado_1(i, prev):
     elif cola[i] == "c":
         cola[i] = "Ø"
         actualizar_cola()
-        status_label.config(text="Cadena correcta", fg="green")
+        if cola[i+1] == "Ø":
+            actualizar_cola()
+            status_label.config(text="Cadena correcta", fg="green")
+        else:
+            status_label.config(text="Cadena inválida", fg="red")
     else:
         status_label.config(text="Cadena inválida", fg="red")
 
